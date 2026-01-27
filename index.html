@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Time Thief</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="light">
+
+  <!-- INSTRUCTION OVERLAY -->
+<div class="instruction-overlay" id="instructionOverlay">
+  <div class="instruction-card">
+    <h2>🎮 TIME THIEF</h2>
+
+    <p>⭐ Click the objects as fast as possible</p>
+    <p> Initally You have only <b>10 seconds</b></p>
+    <p>⏰ Clock adds 2 seconds</p>
+    <p>💣 Bomb reduces time</p>
+    <p>🏆 Top scores appear in leaderboard</p>
+
+    <button id="continueBtn">Got it! 👍</button>
+  </div>
+</div>
+
+
+  <!-- START SCREEN -->
+  <div class="start-screen" id="startScreen">
+    <h1>⏳ Time Thief</h1>
+
+    <input type="text" id="nickname" placeholder="Enter nickname">
+
+    <div class="avatars">
+      <span class="avatar selected">🧑‍🚀</span>
+      <span class="avatar">🧙‍♀️</span>
+      <span class="avatar">🐱</span>
+      <span class="avatar">🤖</span>
+    </div>
+
+    <label class="mode">
+      <input type="checkbox" id="modeToggle"> 🌙 Dark Mode
+    </label>
+
+    <button id="startBtn">Start Game</button>
+  </div>
+
+  <!-- GAME SCREEN -->
+  <div class="game-container hidden" id="gameScreen">
+    <h2 id="playerInfo"></h2>
+
+    <div class="stats">
+      <div>⏰ <span id="time">10</span>s</div>
+      <div>⭐ <span id="score">0</span></div>
+    </div>
+
+    <div id="gameArea">
+      <div id="object"></div>
+    </div>
+  </div>
+
+  <!-- POPUP -->
+  <div class="popup hidden" id="popup">
+    <h2>⏳ TIME'S UP!</h2>
+    <p id="finalScore"></p>
+
+    <h3>🏆 Leaderboard</h3>
+    <ol id="leaderboard"></ol>
+
+    <div class="popup-buttons">
+      <button onclick="closePopup()">Play Again</button>
+      <button onclick="resetLeaderboard()" class="reset-btn">
+        Reset Leaderboard
+      </button>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
